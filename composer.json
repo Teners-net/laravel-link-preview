@@ -1,0 +1,21 @@
+{
+    "name": "teners/laravel-link-preview",
+    "description": "A Laravel package for extracting link previews with customizable parsers, and caching support",
+    "type": "library",
+    "require-dev": {
+        "orchestra/testbench": "^8.21"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Teners\\LaravelLinkPreview\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Platinum",
+            "email": "platinumemirate@gmail.com"
+        }
+    ],
+    "require": {}
+}
