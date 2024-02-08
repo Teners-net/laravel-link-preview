@@ -2,20 +2,50 @@
     "name": "teners/laravel-link-preview",
     "description": "A Laravel package for extracting link previews with customizable parsers, and caching support",
     "type": "library",
+    "license": "MIT",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
     "require-dev": {
         "orchestra/testbench": "^8.21"
     },
-    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Teners\\LaravelLinkPreview\\": "src/"
+            "Teners\\LaravelLinkPreview\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Teners\\LaravelLinkPreview\\Tests\\": "tests"
         }
     },
     "authors": [
         {
             "name": "Platinum",
-            "email": "platinumemirate@gmail.com"
+            "email": "platinumemirate@gmail.com",
+            "role": "Developer",
+            "homepage": "https://teners.net"
         }
     ],
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Teners\\LaravelLinkPreview\\LaravelLinkPreviewServiceProvider"
+            ]
+        }
+    },
+    "keywords": [
+        "laravel",
+        "link preview",
+        "metadata",
+        "parsing",
+        "web scraping",
+        "caching",
+        "HTML parser",
+        "link information",
+        "content preview",
+        "link extractor",
+        "php",
+        "laravel package"
+    ]
 }
