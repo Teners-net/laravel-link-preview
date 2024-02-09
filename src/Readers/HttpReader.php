@@ -1,17 +1,17 @@
 <?php
 
-namespace Teners\LaravelLinkPreview;
+namespace Teners\LaravelLinkPreview\Readers;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ConnectException;
 
-class Reader
+class HttpReader
 {
     public function __construct()
     {
     }
 
-    public static function readurl($url)
+    public static function readUrl($url)
     {
         $client = new Client();
         $config = [
