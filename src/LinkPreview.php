@@ -29,12 +29,10 @@ class LinkPreview
         $cacheType = config('link-preview.cache_type');
 
         switch ($cacheType) {
-            case 'model':
-                return new PackageCache();
             case 'app':
                 return new DefaultAppCache();
             default:
-                throw new InvalidArgumentException("Invalid cache type specified in configuration.");
+                return new PackageCache();
         }
     }
 

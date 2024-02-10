@@ -5,7 +5,7 @@ use Teners\LaravelLinkPreview\Readers\HttpReader;
 
 class ReaderTest extends TestCase
 {
-    public function test_it_can_read_link()
+    public function test_http_reader_can_read_link()
     {
         $content = HttpReader::readUrl("teners.net");
 

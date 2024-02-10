@@ -4,6 +4,7 @@ namespace Teners\LaravelLinkPreview\Tests\Feature;
 
 use InvalidArgumentException;
 use Orchestra\Testbench\TestCase;
+use PDOException;
 use Teners\LaravelLinkPreview\LinkPreview;
 use Teners\LaravelLinkPreview\Parsers\HtmlParser;
 use Teners\LaravelLinkPreview\Readers\HttpReader;
@@ -15,12 +16,16 @@ class LinkPreviewTest extends TestCase
     public function test_it_throws_invalid_argument_exception_for_invalid_link()
     {
         $this->expectException(InvalidArgumentException::class);
+
         LinkPreview::getPreview("htt/teners.net");
     }
 
     public function test_it_does_not_throw_exception_for_valid_link()
     {
+        $this->expectException(PDOException::class);
+
         LinkPreview::getPreview("https://teners.net");
+
         $this->assertTrue(true);
     }
 
@@ -34,9 +39,5 @@ class LinkPreviewTest extends TestCase
 
         assertArrayHasKey('title', $preview);
         assertArrayHasKey('description', $preview);
-    }
-
-    public function test_can_get_link_preview()
-    {
     }
 }
