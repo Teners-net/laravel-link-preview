@@ -21,7 +21,7 @@ return new class extends Migration
       $table->string('description')->nullable();
       $table->string('cover')->nullable();
       $table->string('author')->nullable();
-      $table->string('keywords')->nullable();
+      $table->text('keywords')->nullable();
       $table->string('video')->nullable();
       $table->string('video_type')->nullable();
       $table->timestamps();

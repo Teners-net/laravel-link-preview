@@ -1,5 +1,7 @@
 <?php
 
+namespace Teners\LaravelLinkPreview\Contracts;
+
 interface CacheContract
 {
     /**
@@ -10,5 +12,5 @@ interface CacheContract
     /**
      * Store the link cache
      */
-    public function storeCache(string $key, mixed $value, int $expiry);
+    public function storeCache(string $key, mixed $value, ?int $expiry);
 }

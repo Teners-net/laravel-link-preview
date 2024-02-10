@@ -2,8 +2,8 @@
 
 namespace Teners\LaravelLinkPreview\Caches;
 
-use CacheContract;
-use LinkPreview;
+use Teners\LaravelLinkPreview\Contracts\CacheContract;
+use Teners\LaravelLinkPreview\Models\LinkPreview;
 
 class PackageCache implements CacheContract
 {
@@ -12,7 +12,7 @@ class PackageCache implements CacheContract
      */
     public function getCache(string $url)
     {
-        $cachedPreview = LinkPreview::whereFirst('url', $url);
+        $cachedPreview = LinkPreview::firstWhere('url', $url);
 
         if ($cachedPreview) {
             return $cachedPreview->toArray();
@@ -24,9 +24,13 @@ class PackageCache implements CacheContract
     /**
      * Store the link cache
      */
-    public function storeCache(string $key, mixed $value, int $expiry)
+    public function storeCache(string $url, mixed $value, ?int $expiry)
     {
-        LinkPreview::create();
+        return LinkPreview::updateOrCreate(
+            [
+                'url' => $url
+            ],
+            $value
+        );
     }
 }
-
