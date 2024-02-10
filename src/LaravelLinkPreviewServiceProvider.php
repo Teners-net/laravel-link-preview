@@ -21,6 +21,7 @@ class LaravelLinkPreviewServiceProvider extends ServiceProvider
     private function registerResources()
     {
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/link-preview.php');
     }
 
     private function publishResources()
