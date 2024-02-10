@@ -53,7 +53,17 @@ class HtmlParser implements ParserContract
         ],
     ];
 
-    public static function parse($reader)
+    /**
+     * Parses HTML content using DOM crawler to extract link preview information.
+     *
+     * This method extracts various preview elements (title, description, cover, etc.)
+     * from the provided HTML content using a defined set of selectors and attributes.
+     *
+     * @param object $reader An object containing the HTML content to be parsed.
+     * @return array An associative array containing extracted preview elements.
+     * @throws \Throwable If an error occurs during parsing.
+     */
+    public static function parse($reader): array
     {
         $preview = [];
 
@@ -84,7 +94,15 @@ class HtmlParser implements ParserContract
         return $preview;
     }
 
-    private static function cleanString($string)
+    /**
+     * Cleans a string by removing extra whitespace, decoding HTML entities, and encoding special characters.
+     *
+     * This method ensures consistent string representation by applying specific cleaning steps.
+     *
+     * @param string $string The string to be cleaned.
+     * @return string The cleaned string.
+     */
+    private static function cleanString($string): string
     {
         $string = trim($string);
         $string = htmlspecialchars_decode($string);

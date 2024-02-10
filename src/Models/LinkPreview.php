@@ -31,6 +31,8 @@ class LinkPreview extends Model
 
     /**
      * Get the prunable model query.
+     *
+     * @return Builder
      */
     public function prunable(): Builder
     {

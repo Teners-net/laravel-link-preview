@@ -11,7 +11,13 @@ class HttpReader
     {
     }
 
-    public static function readUrl($url)
+    /**
+     * Read the contents of a url's page/response
+     *
+     * @param string $url The URL to read
+     * @return object The body and content type of the url's response
+     */
+    public static function readUrl($url): object
     {
         $client = new Client();
         $config = [
