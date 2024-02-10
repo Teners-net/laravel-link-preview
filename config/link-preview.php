@@ -24,7 +24,7 @@ return [
      * COMING SOON:
      * 'global': a redix server maintained cache with CDN
      */
-    'cache_type' => env('LINK_PREVIEW_CACHE_TYPE', 'app'),
+    'cache_type' => env('LINK_PREVIEW_CACHE_TYPE', 'model'),
 
     /**
      * Enable or disable specific parsers for link preview generation.
@@ -34,6 +34,7 @@ return [
      *
      * COMING_SOON
      */
+    /** @todo */
     'enabled_parsers' => [
         // 'youtube' => env('LINK_PREVIEW_PARSER_YOUTUBE', false),
         // 'vimeo' => env('LINK_PREVIEW_PARSER_VIMEO', false),
