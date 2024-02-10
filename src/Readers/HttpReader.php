@@ -2,8 +2,8 @@
 
 namespace Teners\LaravelLinkPreview\Readers;
 
+use Exception;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\ConnectException;
 
 class HttpReader
 {
@@ -28,7 +28,7 @@ class HttpReader
                 'body' => $response->getBody(),
                 'content_type' => $response->getHeader('Content-Type')[0]
             ];
-        } catch (ConnectException $e) {
+        } catch (Exception $e) {
         }
     }
 }

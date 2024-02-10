@@ -10,11 +10,22 @@ use Teners\LaravelLinkPreview\Readers\HttpReader;
 
 class LinkPreview
 {
-    public static function getPreview($url)
+    public static function validateUrl($url)
     {
+        $parsedUrl = parse_url($url);
+
+        if (!$parsedUrl || empty($parsedUrl['scheme'])) $url = "https://" . $url;
+
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             throw new InvalidArgumentException("Invalid link provided.");
         }
+
+        return $url;
+    }
+
+    public static function getPreview($url)
+    {
+        $url = self::validateUrl($url);
 
         if (config('link-preview.enable_caching')) {
             $cache = self::getCacheInstance()->getCache($url);
@@ -49,7 +60,8 @@ class LinkPreview
         return self::getCacheInstance()->storeCache($url, $preview, $expriry_duration);
     }
 
-    function getPlatformFromLink($url)
+
+    private function getPlatformFromLink($url)
     {
         // YouTube link pattern
         $youtubePattern = '/^(https?:\/\/)?(www\.)?(youtube\.com\/(c\/)?|youtu\.be\/)/i';

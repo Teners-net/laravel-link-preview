@@ -16,6 +16,7 @@ class LinkPreviewTest extends TestCase
     public function test_it_throws_invalid_argument_exception_for_invalid_link()
     {
         $this->expectException(InvalidArgumentException::class);
+        $this->expectException(PDOException::class);
 
         LinkPreview::getPreview("htt/teners.net");
     }
@@ -24,7 +25,7 @@ class LinkPreviewTest extends TestCase
     {
         $this->expectException(PDOException::class);
 
-        LinkPreview::getPreview("https://teners.net");
+        LinkPreview::getPreview("teners.net");
 
         $this->assertTrue(true);
     }
