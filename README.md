@@ -3,9 +3,12 @@ A Laravel package for extracting link previews with customizable parsers, and ca
 
 [![GitHub license](https://img.shields.io/github/license/Teners-net/laravel-link-preview)](https://github.com/Teners-net/laravel-link-preview/blob/main/LICENSE.md)
 
+<div style="background-color: yellow; color: black; padding: 15px; border-radius: 5px;">
+This package is still in active development and is not ready for production use yet.
+</div>
 
 ## Installation
-To install Laravel Extras, run the following command in your terminal:
+To install Laravel Link Preview, run the following command in your terminal:
 
 ```bash
 composer require teners/laravel-link-preview
