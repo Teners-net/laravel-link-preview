@@ -10,7 +10,7 @@ interface CacheContract
      * @param string $key The identifier for the cached value.
      * @return mixed|null The cached value, or null if not found.
      */
-    public function getCache(string $key): mixed;
+    public function getCache(string $key);
 
     /**
      * Stores a value in the cache with a given key and optional expiry time.

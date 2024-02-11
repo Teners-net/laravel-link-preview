@@ -1,11 +1,14 @@
 # Laravel Link Preview
 A Laravel package for extracting link previews with customizable parsers, and caching support
 
-[![GitHub license](https://img.shields.io/github/license/Teners-net/laravel-link-preview)](https://github.com/Teners-net/laravel-link-preview/blob/main/LICENSE.md)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/teners/laravel-link-preview.svg?style=flat-square)](https://packagist.org/packages/teners/laravel-link-preview)
+[![issues](https://img.shields.io/github/issues/Teners-net/laravel-link-preview?style=flat-square)](https://github.com/Teners-net/laravel-link-preview/issues)
+[![stars](https://img.shields.io/github/stars/Teners-net/laravel-link-preview?style=flat-square)](https://github.com/Teners-net/laravel-link-preview/issues)
+[![GitHub license](https://img.shields.io/github/license/Teners-net/laravel-link-preview?style=flat-square)](https://github.com/Teners-net/laravel-link-preview/blob/main/LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/teners/laravel-link-preview.svg?style=flat-square)](https://packagist.org/packages/teners/laravel-link-preview)
 
-<div style="background-color: yellow; color: black; padding: 15px; border-radius: 5px;">
-This package is still in active development and is not ready for production use yet.
-</div>
+
+**This package is still in active development.**
 
 ## Installation
 To install Laravel Link Preview, run the following command in your terminal:
@@ -32,9 +35,20 @@ Contributions are **welcome** via Pull Requests on [Github](https://github.com/T
 ## Issues
 Please report any issue you encounter in using the package through the [Github Issues](https://github.com/Teners-net/laravel-link-preview/issues) tab.
 
+## Testing
 
-## Contributors
+``` bash
+composer test
+```
 
-## Credits and License
-Laravel-link-preview was created by [Emmanuel Adesina](https://teners.net/) and is licensed under the [MIT license](LICENSE.md).
+## Credits
 
+- [Emmanuel Adesina](https://github.com/ThePlatinum)
+
+### Contributors
+
+Contributors list will be added here
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

@@ -3,6 +3,7 @@
     "description": "A Laravel package for extracting link previews with customizable parsers, and caching support",
     "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/Teners-net/laravel-link-preview#readme",
     "require": {
         "guzzlehttp/guzzle": "^7.0",
         "symfony/dom-crawler": "^7.0"
@@ -22,10 +23,10 @@
     },
     "authors": [
         {
-            "name": "Platinum",
-            "email": "platinumemirate@gmail.com",
-            "role": "Developer",
-            "homepage": "https://teners.net"
+            "name": "Emmanuel Adesina",
+            "email": "emmanuel@teners.net",
+            "homepage": "https://teners.net",
+            "role": "Developer"
         }
     ],
     "extra": {
@@ -36,6 +37,7 @@
         }
     },
     "keywords": [
+        "teners",
         "laravel",
         "link preview",
         "metadata",
@@ -48,5 +50,8 @@
         "link extractor",
         "php",
         "laravel package"
-    ]
+    ],
+    "scripts": {
+        "test": "phpunit"
+    }
 }
