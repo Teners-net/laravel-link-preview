@@ -3,7 +3,7 @@
 namespace Teners\LaravelLinkPreview\Tests\Feature;
 
 use InvalidArgumentException;
-use Orchestra\Testbench\TestCase;
+use Teners\LaravelLinkPreview\Tests\TestCase;
 use PDOException;
 use Teners\LaravelLinkPreview\LinkPreview;
 use Teners\LaravelLinkPreview\Parsers\HtmlParser;

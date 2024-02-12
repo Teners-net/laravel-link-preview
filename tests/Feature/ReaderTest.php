@@ -1,7 +1,7 @@
 <?php
 
-use Orchestra\Testbench\TestCase;
 use Teners\LaravelLinkPreview\Readers\HttpReader;
+use Teners\LaravelLinkPreview\Tests\TestCase;
 
 class ReaderTest extends TestCase
 {
